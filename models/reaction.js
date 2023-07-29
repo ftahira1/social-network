@@ -9,8 +9,8 @@ const reactionSchema = new Schema(
     reactionBody: {
       type: String,
       required: true,
-      maxlength: 280,
-      minlength: 10,
+      maxlength: 200,
+      minlength: 15,
     },
     username: {
       type: String,
@@ -41,6 +41,4 @@ function formatDate(createdAt) {
   });
 };
 
-const Reaction = model('Reaction', reactionSchema);
-
-module.exports = Reaction;
+module.exports = reactionSchema;
